@@ -1,0 +1,932 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Gaurav Maheshwari | Software Engineer — Building Systems That Scale
+    </title>
+    <meta
+      name="description"
+      content="Portfolio of Gaurav Maheshwari – Software Engineer who architects distributed systems, ships SaaS products, and builds backends that handle millions of requests."
+    />
+    <meta name="theme-color" content="#0a0a1a" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+      <div class="preloader-inner">
+        <div class="preloader-ring"></div>
+        <span class="preloader-text">GM</span>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#hero" class="nav-logo">
+          <span class="logo-bracket">&lt;</span>GM<span class="logo-bracket">
+            /&gt;</span
+          >
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about" class="nav-link" data-number="01">About</a></li>
+          <li>
+            <a href="#experience" class="nav-link" data-number="02"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a href="#projects" class="nav-link" data-number="03">Projects</a>
+          </li>
+          <li>
+            <a href="#skills" class="nav-link" data-number="04">Skills</a>
+          </li>
+          <li>
+            <a href="#achievements" class="nav-link" data-number="05"
+              >Achievements</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="nav-link" data-number="06">Contact</a>
+          </li>
+        </ul>
+        <a
+          href="https://drive.google.com/uc?export=download&id=1ZQYTSDOrRqRXfJ8XAXPRKy64CyjImL6l"
+          download
+          class="nav-resume-btn"
+        >
+          <i class="fas fa-download"></i> Resume
+        </a>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Side Elements -->
+    <div class="side-element side-left">
+      <ul class="social-links">
+        <li>
+          <a
+            href="https://github.com/gaurav23122001"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            ><i class="fab fa-github"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/gaurav23122001/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://leetcode.com/u/gaurav23122001/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LeetCode"
+            ><i class="fas fa-code"></i
+          ></a>
+        </li>
+        <li>
+          <a href="mailto:gaurav23122001@gmail.com" aria-label="Email"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="side-element side-right">
+      <a href="mailto:gaurav23122001@gmail.com" class="side-email"
+        >gaurav23122001@gmail.com</a
+      >
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <canvas id="particleCanvas"></canvas>
+      <div class="hero-content">
+        <!-- <div class="hero-badge reveal-up" style="--delay: 0.05s">
+          <span class="badge-dot"></span>
+          <span>Available for opportunities</span>
+        </div> -->
+        <p class="hero-greeting reveal-up" style="--delay: 0.1s">
+          <span class="hero-code-tag">&lt;/&gt;</span> Hi there, I'm
+        </p>
+        <h1 class="hero-name reveal-up" style="--delay: 0.2s">
+          Gaurav Maheshwari<span class="accent-dot">.</span>
+        </h1>
+        <h2 class="hero-tagline reveal-up" style="--delay: 0.3s">
+          I architect systems that
+          <span class="gradient-text">scale to millions</span>.
+        </h2>
+        <p class="hero-description reveal-up" style="--delay: 0.4s">
+          Senior Software Engineer specializing in distributed systems and cloud
+          architecture. I design
+          <span class="highlight">fault-tolerant microservices</span>, architect
+          <span class="highlight">high-performance backends</span>, and build
+          enterprise-grade solutions.
+        </p>
+
+        <!-- Rotating Titles -->
+        <div class="hero-roles reveal-up" style="--delay: 0.35s">
+          <span class="role-prefix">I'm a</span>
+          <div class="role-carousel">
+            <span class="role-item">Backend Architect</span>
+            <span class="role-item">Systems Designer</span>
+            <span class="role-item">SaaS Builder</span>
+            <span class="role-item">Cloud Engineer</span>
+            <span class="role-item">Problem Solver</span>
+          </div>
+        </div>
+        <div class="hero-cta reveal-up" style="--delay: 0.5s">
+          <a href="#projects" class="btn btn-primary">
+            <span>View My Work</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <span>Get In Touch</span>
+          </a>
+        </div>
+
+        <!-- Animated Stats -->
+        <div class="hero-stats reveal-up" style="--delay: 0.6s">
+          <div class="stat-item">
+            <div class="stat-value">
+              <span class="stat-number" data-target="2">0</span
+              ><span class="stat-plus">+</span>
+            </div>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">
+              <span class="stat-number" data-target="10">0</span
+              ><span class="stat-plus">+</span>
+            </div>
+            <span class="stat-label">Enterprise Projects</span>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">
+              <span class="stat-number" data-target="300">0</span
+              ><span class="stat-plus">+</span>
+            </div>
+            <span class="stat-label">DSA Problems Solved</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+        <div class="mouse">
+          <div class="mouse-wheel"></div>
+        </div>
+        <span>Scroll</span>
+      </a> -->
+    </section>
+
+    <!-- Marquee Quote Strip -->
+    <div class="marquee-strip">
+      <div class="marquee-track">
+        <span class="marquee-item">SCALABLE SYSTEMS</span>
+        <span class="marquee-separator">✦</span>
+        <span class="marquee-item">DISTRIBUTED ARCHITECTURE</span>
+        <span class="marquee-separator">✦</span>
+        <span class="marquee-item">MICROSERVICES</span>
+        <span class="marquee-separator">✦</span>
+        <span class="marquee-item">CLOUD NATIVE</span>
+        <span class="marquee-separator">✦</span>
+        <span class="marquee-item">EVENT-DRIVEN</span>
+        <span class="marquee-separator">✦</span>
+        <span class="marquee-item">HIGH AVAILABILITY</span>
+        <span class="marquee-separator">✦</span>
+        <span class="marquee-item">FAULT TOLERANT</span>
+        <span class="marquee-separator">✦</span>
+        <span class="marquee-item">SCALABLE SYSTEMS</span>
+        <span class="marquee-separator">✦</span>
+        <span class="marquee-item">DISTRIBUTED ARCHITECTURE</span>
+        <span class="marquee-separator">✦</span>
+        <span class="marquee-item">MICROSERVICES</span>
+        <span class="marquee-separator">✦</span>
+        <span class="marquee-item">CLOUD NATIVE</span>
+        <span class="marquee-separator">✦</span>
+        <span class="marquee-item">EVENT-DRIVEN</span>
+        <span class="marquee-separator">✦</span>
+        <span class="marquee-item">HIGH AVAILABILITY</span>
+        <span class="marquee-separator">✦</span>
+        <span class="marquee-item">FAULT TOLERANT</span>
+        <span class="marquee-separator">✦</span>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+      <div class="container">
+        <h2 class="section-heading reveal-up">
+          <span class="section-number">01.</span> About Me
+        </h2>
+        <div class="about-grid">
+          <div class="about-text reveal-up" style="--delay: 0.1s">
+            <p>
+              Hello! I'm Gaurav, a software engineer who thrives on building
+              systems that scale. My journey began during my B.Tech at
+              <span class="highlight">NIT Agartala</span>, where I fell in love
+              with the elegance of distributed systems and cloud architecture.
+            </p>
+            <p>
+              Today, I work at <span class="highlight">GEP Worldwide</span>,
+              where I design and build enterprise-grade microservices supporting
+              procurement workflows for Fortune 500 clients. I architect
+              fault-tolerant systems that handle high-throughput operations and
+              ensure seamless integration across distributed services.
+            </p>
+            <p>
+              Beyond my day job, I'm passionate about full-stack ownership —
+              I've built and shipped
+              <span class="highlight">production SaaS platforms</span> from
+              ground up, owning everything from system architecture to
+              deployment pipelines and operational monitoring.
+            </p>
+            <p>Here are some technologies I've been working with recently:</p>
+            <ul class="about-tech-list">
+              <li>.NET Core / C#</li>
+              <li>Node.js / TypeScript</li>
+              <li>MongoDB / PostgreSQL</li>
+              <li>Apache Kafka</li>
+              <li>Microsoft Azure</li>
+              <li>Next.js / React</li>
+              <li>Redis / Elasticsearch</li>
+              <li>Docker / Nginx</li>
+            </ul>
+          </div>
+          <div class="about-image reveal-up" style="--delay: 0.2s">
+            <div class="image-wrapper">
+              <div class="image-overlay"></div>
+              <img
+                src="./assets/B3CC73BF-B340-4B5F-B969-A91E4E767A1F_1_105_c.jpeg"
+                alt="Software Engineer - Professional Developer"
+                loading="lazy"
+              />
+              <div class="image-border"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="section philosophy" id="philosophy">
+      <div class="container">
+        <div class="philosophy-grid">
+          <div class="philosophy-card reveal-up" style="--delay: 0.1s">
+            <div class="philosophy-icon"><i class="fas fa-rocket"></i></div>
+            <h3>Ship Fast, Iterate Faster</h3>
+            <p>
+              I believe in getting things to production quickly. Real feedback
+              from real users beats theoretical perfection every time.
+            </p>
+          </div>
+          <div class="philosophy-card reveal-up" style="--delay: 0.2s">
+            <div class="philosophy-icon"><i class="fas fa-sitemap"></i></div>
+            <h3>Design for Scale</h3>
+            <p>
+              Every system I build is designed to handle 10x its current load.
+              Scaling shouldn't be an afterthought — it's the foundation.
+            </p>
+          </div>
+          <div class="philosophy-card reveal-up" style="--delay: 0.3s">
+            <div class="philosophy-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>Own What You Build</h3>
+            <p>
+              From architecture to production monitoring. I don't just write
+              code — I own the entire lifecycle, including the 3 AM pages.
+            </p>
+          </div>
+        </div>
+
+        <!-- Code Terminal -->
+        <div class="code-terminal reveal-up" style="--delay: 0.4s">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <span class="terminal-title">gaurav@portfolio:~</span>
+          </div>
+          <div class="terminal-body">
+            <div class="terminal-line">
+              <span class="terminal-prompt">$</span>
+              <span class="terminal-command" id="terminalText"></span>
+              <span class="terminal-cursor">|</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience" id="experience">
+      <div class="container">
+        <h2 class="section-heading reveal-up">
+          <span class="section-number">02.</span> Where I've Worked
+        </h2>
+
+        <div class="experience-timeline">
+          <div class="timeline-line"></div>
+
+          <!-- Experience Item -->
+          <div class="timeline-item reveal-up" style="--delay: 0.1s">
+            <div class="timeline-dot">
+              <div class="dot-pulse"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Software Engineer</h3>
+                  <h4 class="timeline-company">
+                    <a href="https://www.gep.com" target="_blank" rel="noopener"
+                      >@ GEP Worldwide</a
+                    >
+                  </h4>
+                </div>
+                <span class="timeline-date">
+                  <i class="fas fa-calendar-alt"></i> Jul 2024 — Present
+                </span>
+              </div>
+              <div class="timeline-tags">
+                <span class="tag">.NET 8</span>
+                <span class="tag">C#</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">Kafka</span>
+                <span class="tag">Azure</span>
+                <span class="tag">Microservices</span>
+              </div>
+              <ul class="timeline-details">
+                <li>
+                  <i class="fas fa-caret-right"></i>
+                  Designed and owned end-to-end implementation of a Low-Code
+                  architecture across 3 cross-functional teams, enabling dynamic
+                  document integration and extensible multi-module workflows
+                  that directly accelerated enterprise feature delivery
+                  timelines.
+                </li>
+                <li>
+                  <i class="fas fa-caret-right"></i>
+                  Resolved critical production bottlenecks by redesigning
+                  MongoDB document storage schemas in a Kafka-driven pipeline
+                  processing ~100 req/s, reducing document size from ~10MB to
+                  ~1MB and significantly improving processing reliability.
+                </li>
+                <li>
+                  <i class="fas fa-caret-right"></i>
+                  Built and maintained scalable backend microservices using .NET
+                  8, C#, MongoDB, Kafka, and Azure supporting enterprise
+                  procurement workflows for Fortune 500 clients.
+                </li>
+                <li>
+                  <i class="fas fa-caret-right"></i>
+                  Engineered a Selenium-based Smoke & Regression Automation
+                  framework in Java, cutting manual QA effort by ~60% and
+                  improving release reliability.
+                </li>
+                <li>
+                  <i class="fas fa-caret-right"></i>
+                  Owned UAT and Production releases, Hotfix deployments, RCA
+                  investigations, and operational support across 3 independently
+                  deployed product modules.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Education Item -->
+          <div class="timeline-item reveal-up" style="--delay: 0.2s">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">
+                    B.Tech in Computer Science & Engineering
+                  </h3>
+                  <h4 class="timeline-company">@ NIT Agartala</h4>
+                </div>
+                <span class="timeline-date">
+                  <i class="fas fa-calendar-alt"></i> Dec 2020 — Jun 2024
+                </span>
+              </div>
+              <div class="timeline-tags">
+                <span class="tag">CGPA: 8.71</span>
+                <span class="tag">DSA</span>
+                <span class="tag">System Design</span>
+                <span class="tag">DBMS</span>
+                <span class="tag">OS</span>
+              </div>
+              <ul class="timeline-details">
+                <li>
+                  <i class="fas fa-caret-right"></i>
+                  Graduated with a strong foundation in Computer Science
+                  fundamentals, data structures & algorithms, and system design
+                  principles.
+                </li>
+                <li>
+                  <i class="fas fa-caret-right"></i>
+                  Finalist in Ethos Hackathon 2022 organized by IIT Guwahati,
+                  selected among 1000+ participants.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <h2 class="section-heading reveal-up">
+          <span class="section-number">03.</span> Things I've Built
+        </h2>
+
+        <!-- Featured Project 1 -->
+        <div class="featured-project reveal-up" style="--delay: 0.1s">
+          <div class="project-image">
+            <a href="https://wautopilot.com/" target="_blank" rel="noopener">
+              <div class="project-image-overlay"></div>
+              <img
+                src="./assets/Screenshot 2026-05-16 at 8.12.54 PM.png"
+                alt="WAutopilot - WhatsApp Automation Platform"
+                loading="lazy"
+              />
+            </a>
+          </div>
+          <div class="project-info">
+            <p class="project-overline">Featured Project</p>
+            <h3 class="project-title">
+              <a href="https://wautopilot.com/" target="_blank" rel="noopener"
+                >WAutopilot</a
+              >
+            </h3>
+            <div class="project-description">
+              <p>
+                A
+                <strong>multi-tenant WhatsApp automation SaaS platform</strong>
+                integrated with Meta WhatsApp Cloud APIs. Supports
+                <strong>50+ MAUs</strong>, processed
+                <strong>1M+ messages</strong>, and manages
+                <strong>200K+ contacts</strong>. Features campaign scheduling,
+                chatbot automation, webhook forwarding, and real-time messaging
+                via Socket.IO.
+              </p>
+            </div>
+            <ul class="project-tech-list">
+              <li>Node.js</li>
+              <li>Express.js</li>
+              <li>MongoDB</li>
+              <li>Socket.IO</li>
+              <li>Next.js</li>
+              <li>TypeScript</li>
+              <li>Nginx</li>
+            </ul>
+            <div class="project-links">
+              <a
+                href="https://wautopilot.com/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Visit WAutopilot"
+              >
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+            <div class="project-highlights">
+              <div class="highlight-badge">
+                <i class="fas fa-users"></i> 50+ MAUs
+              </div>
+              <div class="highlight-badge">
+                <i class="fas fa-envelope"></i> 1M+ Messages
+              </div>
+              <div class="highlight-badge">
+                <i class="fas fa-address-book"></i> 200K+ Contacts
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Project 2 -->
+        <div
+          class="featured-project featured-project--reverse reveal-up"
+          style="--delay: 0.2s"
+        >
+          <div class="project-image">
+            <a href="https://whatsleads.in/" target="_blank" rel="noopener">
+              <div class="project-image-overlay"></div>
+              <img
+                src="./assets/Screenshot 2026-05-16 at 8.14.46 PM.png"
+                alt="WhatsLeads - Marketing Platform"
+                loading="lazy"
+              />
+            </a>
+          </div>
+          <div class="project-info">
+            <p class="project-overline">Featured Project</p>
+            <h3 class="project-title">
+              <a href="https://whatsleads.in/" target="_blank" rel="noopener"
+                >WhatsLeads</a
+              >
+            </h3>
+            <div class="project-description">
+              <p>
+                A
+                <strong>WhatsApp marketing and automation platform</strong> with
+                bulk messaging and campaign management. Processed
+                <strong>10,000+ messages</strong> and enabled extraction of
+                <strong>500K+ business contacts</strong>
+                from raw WhatsApp data. Features Redis-based caching, background
+                job queues, analytics-enabled short link tracking, and Razorpay
+                payment integration.
+              </p>
+            </div>
+            <ul class="project-tech-list">
+              <li>Node.js</li>
+              <li>Express.js</li>
+              <li>MongoDB</li>
+              <li>Redis</li>
+              <li>React.js</li>
+              <li>TypeScript</li>
+            </ul>
+            <div class="project-links">
+              <a
+                href="https://whatsleads.in/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Visit WhatsLeads"
+              >
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+            <div class="project-highlights">
+              <div class="highlight-badge">
+                <i class="fas fa-paper-plane"></i> 10K+ Messages
+              </div>
+              <div class="highlight-badge">
+                <i class="fas fa-database"></i> 500K+ Contacts
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote Banner -->
+    <div class="quote-banner">
+      <div class="container">
+        <blockquote class="dev-quote reveal-up">
+          <span class="quote-mark">"</span>
+          Any fool can write code that a computer can understand. Good
+          programmers write code that humans can understand.
+          <span class="quote-mark">"</span>
+          <cite>— Martin Fowler</cite>
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <h2 class="section-heading reveal-up">
+          <span class="section-number">04.</span> My Toolkit
+        </h2>
+
+        <div class="skills-grid">
+          <div class="skill-category reveal-up" style="--delay: 0.1s">
+            <div class="skill-icon"><i class="fas fa-code"></i></div>
+            <h3>Languages</h3>
+            <div class="skill-tags">
+              <span class="skill-tag" data-level="expert">C#</span>
+              <span class="skill-tag" data-level="expert">JavaScript</span>
+              <span class="skill-tag" data-level="expert">TypeScript</span>
+              <span class="skill-tag" data-level="advanced">C++</span>
+              <span class="skill-tag" data-level="intermediate">Python</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal-up" style="--delay: 0.15s">
+            <div class="skill-icon"><i class="fas fa-server"></i></div>
+            <h3>Backend</h3>
+            <div class="skill-tags">
+              <span class="skill-tag" data-level="expert">.NET Core</span>
+              <span class="skill-tag" data-level="expert">Node.js</span>
+              <span class="skill-tag" data-level="expert">Express.js</span>
+              <span class="skill-tag" data-level="advanced">Kafka</span>
+              <span class="skill-tag" data-level="advanced">Redis</span>
+              <span class="skill-tag" data-level="expert">REST APIs</span>
+              <span class="skill-tag" data-level="expert">Microservices</span>
+              <span class="skill-tag" data-level="advanced">System Design</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal-up" style="--delay: 0.2s">
+            <div class="skill-icon"><i class="fas fa-palette"></i></div>
+            <h3>Frontend</h3>
+            <div class="skill-tags">
+              <span class="skill-tag" data-level="advanced">React.js</span>
+              <span class="skill-tag" data-level="advanced">Next.js</span>
+              <span class="skill-tag" data-level="advanced">Tailwind CSS</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal-up" style="--delay: 0.25s">
+            <div class="skill-icon"><i class="fas fa-database"></i></div>
+            <h3>Databases</h3>
+            <div class="skill-tags">
+              <span class="skill-tag" data-level="expert">MongoDB</span>
+              <span class="skill-tag" data-level="advanced">PostgreSQL</span>
+              <span class="skill-tag" data-level="intermediate">MySQL</span>
+              <span class="skill-tag" data-level="intermediate"
+                >Elasticsearch</span
+              >
+            </div>
+          </div>
+
+          <div class="skill-category reveal-up" style="--delay: 0.3s">
+            <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+            <h3>Cloud & DevOps</h3>
+            <div class="skill-tags">
+              <span class="skill-tag" data-level="advanced">Azure</span>
+              <span class="skill-tag" data-level="advanced">CI/CD</span>
+              <span class="skill-tag" data-level="advanced">Nginx</span>
+              <span class="skill-tag" data-level="advanced">Linux VPS</span>
+              <span class="skill-tag" data-level="intermediate"
+                >Azure Pipelines</span
+              >
+            </div>
+          </div>
+
+          <div class="skill-category reveal-up" style="--delay: 0.35s">
+            <div class="skill-icon"><i class="fas fa-tools"></i></div>
+            <h3>Tools & Testing</h3>
+            <div class="skill-tags">
+              <span class="skill-tag" data-level="expert">Git / GitHub</span>
+              <span class="skill-tag" data-level="advanced">New Relic</span>
+              <span class="skill-tag" data-level="advanced">SonarQube</span>
+              <span class="skill-tag" data-level="advanced">Selenium</span>
+              <span class="skill-tag" data-level="intermediate">Cypress</span>
+              <span class="skill-tag" data-level="intermediate">Camunda</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="section achievements" id="achievements">
+      <div class="container">
+        <h2 class="section-heading reveal-up">
+          <span class="section-number">05.</span> Achievements
+        </h2>
+
+        <div class="achievements-grid">
+          <div class="achievement-card reveal-up" style="--delay: 0.1s">
+            <div class="achievement-icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <h3>GEP Kudos – Catalyst Award</h3>
+            <p>Q1 2025</p>
+            <span class="achievement-detail"
+              >Recognized for impactful engineering contributions and ownership
+              across the platform.</span
+            >
+            <!-- Replace '#' below with your actual certificate URL -->
+            <a
+              href="#"
+              class="achievement-cert-link"
+              title="Add your certificate link here"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fas fa-link"></i> Add Certificate Link
+            </a>
+          </div>
+
+          <div class="achievement-card reveal-up" style="--delay: 0.2s">
+            <div class="achievement-icon">
+              <i class="fas fa-medal"></i>
+            </div>
+            <h3>Ethos Hackathon Finalist</h3>
+            <p>IIT Guwahati, 2022</p>
+            <span class="achievement-detail"
+              >Selected among 1000+ participants in a national-level hackathon
+              organized by IIT Guwahati.</span
+            >
+          </div>
+
+          <div class="achievement-card reveal-up" style="--delay: 0.3s">
+            <div class="achievement-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3>300+ LeetCode Problems</h3>
+            <p>
+              <a
+                href="https://leetcode.com/u/gaurav23122001/"
+                target="_blank"
+                rel="noopener"
+                >View Profile →</a
+              >
+            </p>
+            <span class="achievement-detail"
+              >Consistent problem solver with deep expertise in data structures
+              and algorithms.</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Download Section -->
+    <section class="section resume-section" id="resume">
+      <div class="container">
+        <div class="resume-card reveal-up">
+          <div class="resume-card-bg"></div>
+          <div class="resume-card-content">
+            <h2>Want a copy of my resume?</h2>
+            <p>
+              Download my latest resume to learn more about my experience,
+              skills, and projects.
+            </p>
+            <a
+              href="https://drive.google.com/uc?export=download&id=1ZQYTSDOrRqRXfJ8XAXPRKy64CyjImL6l"
+              download
+              class="btn btn-primary btn-lg"
+            >
+              <i class="fas fa-file-pdf"></i>
+              <span>Download Resume</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <h2 class="section-heading reveal-up">
+          <span class="section-number">06.</span> Get In Touch
+        </h2>
+        <div class="contact-wrapper">
+          <div class="contact-info reveal-up" style="--delay: 0.1s">
+            <h3>Let's work together</h3>
+            <p>
+              I'm currently open to new opportunities and interesting projects.
+              Whether you have a question, a proposal, or just want to say hi —
+              my inbox is always open. I'll get back to you as soon as I can!
+            </p>
+            <div class="contact-details">
+              <a
+                href="mailto:gaurav23122001@gmail.com"
+                class="contact-detail-item"
+              >
+                <i class="fas fa-envelope"></i>
+                <span>gaurav23122001@gmail.com</span>
+              </a>
+              <a href="tel:+919785562665" class="contact-detail-item">
+                <i class="fas fa-phone"></i>
+                <span>+91-9785562665</span>
+              </a>
+              <!-- <div class="contact-detail-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Hyderabad, India</span>
+              </div> -->
+            </div>
+            <div class="contact-socials">
+              <a
+                href="https://github.com/gaurav23122001"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/gaurav23122001/"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://leetcode.com/u/gaurav23122001/"
+                target="_blank"
+                rel="noopener"
+                aria-label="LeetCode"
+                ><i class="fas fa-code"></i
+              ></a>
+            </div>
+          </div>
+          <form
+            class="contact-form reveal-up"
+            style="--delay: 0.2s"
+            id="contactForm"
+          >
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="John Doe"
+                autocomplete="name"
+              />
+              <span class="form-line"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="john@example.com"
+                autocomplete="email"
+              />
+              <span class="form-line"></span>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                required
+                placeholder="Let's collaborate!"
+              />
+              <span class="form-line"></span>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                placeholder="Your message here..."
+              ></textarea>
+              <span class="form-line"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <span>Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p class="footer-credit">
+          Designed & Built by
+          <a
+            href="https://github.com/gaurav23122001"
+            target="_blank"
+            rel="noopener"
+            >Gaurav Maheshwari</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
